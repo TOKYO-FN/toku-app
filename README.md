@@ -17,7 +17,7 @@ A beginner-friendly app designed to help users learn essential Japanese vocabula
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Flutter (or React Native, if preferred).
+- **Frontend**: Flutter 
 - **Backend**: Firebase (for data storage and user progress tracking).
 - **Language**: Japanese with English translations.
 
