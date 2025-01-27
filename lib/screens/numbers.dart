@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class Numbers extends StatelessWidget {
   const Numbers({super.key});
+  final Number one = const Number(
+      image: 'assets/images/numbers/number_one.png',
+      jpName: 'ichi',
+      enName: 'one');
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class Numbers extends StatelessWidget {
             Container(
               color: Color(0xffFFF4D9),
               child: Image.asset(
-                'assets/images/numbers/number_one.png',
+                one.image,
               ),
             ),
             Padding(
@@ -34,14 +38,14 @@ class Numbers extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "ichi",
+                    one.jpName,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                     ),
                   ),
                   Text(
-                    "one",
+                    one.enName,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -66,4 +70,13 @@ class Numbers extends StatelessWidget {
       ),
     );
   }
+}
+
+class Number {
+  final String image;
+  final String jpName;
+  final String enName;
+
+  const Number(
+      {required this.image, required this.jpName, required this.enName});
 }
