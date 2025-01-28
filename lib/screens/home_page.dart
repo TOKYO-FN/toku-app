@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:toku/screens/colors.dart';
-import 'package:toku/screens/family_members.dart';
-import 'package:toku/screens/numbers.dart';
-import 'package:toku/screens/phrases.dart';
+import 'package:toku/screens/colors_page.dart';
+import 'package:toku/screens/family_members_page.dart';
+import 'package:toku/screens/numbers_page.dart';
+import 'package:toku/screens/phrases_page.dart';
 import '../components/category_items.dart';
 
 class HomePage extends StatelessWidget {

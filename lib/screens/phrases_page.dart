@@ -3,54 +3,60 @@ import 'package:toku/components/item.dart';
 
 import '../models/number.dart';
 
-class Numbers extends StatelessWidget {
-  const Numbers({super.key});
-  final Number one = const Number(
-      image: 'assets/images/numbers/number_one.png',
-      jpName: 'ichi',
-      enName: 'one');
+class Phrases extends StatelessWidget {
+  const Phrases({super.key});
 
-  final List<Number> nums = const [
-    Number(
+  final List<ItemModel> nums = const [
+    ItemModel(
         image: 'assets/images/numbers/number_one.png',
         jpName: 'ichi',
-        enName: 'one'),
-    Number(
+        enName: 'one',
+        sound: 'sounds/numbers/number_one_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_two.png',
         jpName: "ni",
-        enName: "two"),
-    Number(
+        enName: "two",
+        sound: 'sounds/numbers/number_two_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_three.png',
         jpName: "san",
-        enName: "three"),
-    Number(
+        enName: "three",
+        sound: 'sounds/numbers/number_three_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_four.png',
         jpName: "shi",
-        enName: "four"),
-    Number(
+        enName: "four",
+        sound: 'sounds/numbers/number_four_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_five.png',
         jpName: "go",
-        enName: "five"),
-    Number(
+        enName: "five",
+        sound: 'sounds/numbers/number_five_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_six.png',
         jpName: "roku",
-        enName: "six"),
-    Number(
+        enName: "six",
+        sound: 'sounds/numbers/number_six_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_seven.png',
         jpName: "nana",
-        enName: "seven"),
-    Number(
+        enName: "seven",
+        sound: 'sounds/numbers/number_seven_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_eight.png',
         jpName: "hachi",
-        enName: "eight"),
-    Number(
+        enName: "eight",
+        sound: 'sounds/numbers/number_eight_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_nine.png',
         jpName: "kyu",
-        enName: "nine"),
-    Number(
+        enName: "nine",
+        sound: 'sounds/numbers/number_nine_sound.mp3'),
+    ItemModel(
         image: 'assets/images/numbers/number_ten.png',
         jpName: "jyu",
-        enName: "ten"),
+        enName: "ten",
+        sound: 'sounds/numbers/number_ten_sound.mp3'),
   ];
 
   @override
@@ -72,18 +78,18 @@ class Numbers extends StatelessWidget {
         itemBuilder: (context, index) {
           return Item(
             number: nums[index],
+            color: Color(0xff51B0D5),
           );
         },
-        // children: getItems(nums),
       ),
     );
   }
 
-  List<Item> getItems(List<Number> numbers) {
-    List<Item> listItems = [];
-    for (int i = 0; i < numbers.length; i += 1) {
-      listItems.add(Item(number: numbers[i]));
-    }
-    return listItems;
-  }
+// List<Item> getItems(List<Number> numbers) {
+//   List<Item> listItems = [];
+//   for (int i = 0; i < numbers.length; i += 1) {
+//     listItems.add(Item(number: numbers[i]));
+//   }
+//   return listItems;
+// }
 }
