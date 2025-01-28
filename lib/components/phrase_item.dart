@@ -1,13 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
+import 'package:toku/models/number.dart';
 
-import '../models/number.dart';
+class PhraseItem extends StatelessWidget {
+  const PhraseItem({super.key, required this.itemModel, required this.color});
+  final ItemModel itemModel;
+  final Color color;
 
-class Item extends StatelessWidget {
-  Item({super.key, required this.number, required this.color});
-
-  ItemModel number;
-  Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,12 +14,6 @@ class Item extends StatelessWidget {
       height: 100,
       child: Row(
         children: [
-          Container(
-            color: Color(0xffFFF4D9),
-            child: Image.asset(
-              number.image!,
-            ),
-          ),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Column(
@@ -28,17 +21,17 @@ class Item extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  number.jpName,
+                  itemModel.jpName,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 16,
                   ),
                 ),
                 Text(
-                  number.enName,
+                  itemModel.enName,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 16,
                   ),
                 ),
               ],
@@ -53,7 +46,7 @@ class Item extends StatelessWidget {
               onPressed: () {
                 final player = AudioPlayer();
                 player.play(
-                  AssetSource(number.sound),
+                  AssetSource(itemModel.sound),
                 );
               },
               icon: Icon(

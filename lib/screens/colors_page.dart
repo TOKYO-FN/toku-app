@@ -6,7 +6,7 @@ import '../models/number.dart';
 class Colorss extends StatelessWidget {
   const Colorss({super.key});
 
-  final List<ItemModel> nums = const [
+  final List<ItemModel> colorsList = const [
     ItemModel(
         image: 'assets/images/colors/color_black.png',
         jpName: 'Kuro',
@@ -64,10 +64,10 @@ class Colorss extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: nums.length,
+        itemCount: colorsList.length,
         itemBuilder: (context, index) {
           return Item(
-            number: nums[index],
+            number: colorsList[index],
             color: Color(0xff854CAE),
           );
         },
