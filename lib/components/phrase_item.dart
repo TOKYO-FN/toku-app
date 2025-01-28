@@ -59,6 +59,5 @@ class PhraseItem extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
